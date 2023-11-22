@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    background: #fff;
+    order: 10001 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav{
+    padding: 15px 10%;
+    background: #fff;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+.lg-menu{
+    display: flex;
+}
+.lg-menu a{
+    padding: 8px 18px;
+    color: #333;
+    margin: 0 15px;
+    border-radius: 8px;
+    transition: all .32s ease-in;
+}
+.lg-menu a:hover{
+    background: #dfe9f4;
+}
+.menuBtn{
+    display: none;
+}
+.menuBtn i{
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+.mobile-menu{
+    background: #fff;
+}
+.mobile-menu a{
+    display: block;
+    color: #333;
+    padding: 8px 0;
+    margin-top: 12px;
+}
+.hidden{
+    display: none;
+}
+.shadow{
+    box-shadow: 0 2px 2px -2px gray;
+}
+/* Banner Section Styling Start  */
+.banner{
+    width: 100%;
+    margin-top: 40px;
+    height: 100vh;
+    background-image: url(../img/banner.png);
+    background-position: center center;
+    object-fit: cover;
+}
+.banner-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+.banner-container div, .empty-div{
+    width: 50%;
+}
+.banner-content{
+    background: #dfe9f4;
+    border-radius: 10px;
+    padding: 36px;
+    margin: 100px 0;
+}
+.banner-content h5{
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.banner-content h1{
+    color: #054C74;
+    font-size: 52px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 65px;
+    padding: 20px 0;
+}
+.banner-content p{
+    color: #333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 39px;
+    margin-bottom: 30px;
+}
+.btn{
+    padding: 24px 57px;
+    background: #054C73;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #333;
+}
+
+
+@media screen and (max-width: 576px) {
+    nav{
+        padding: 15px 5%;
+    }
+    .lg-menu{
+        display: none;
+    }
+    .menuBtn{
+        display: block;
+    }
+}
