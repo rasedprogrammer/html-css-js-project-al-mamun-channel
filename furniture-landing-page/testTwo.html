@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Fields with Icons</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .input-container {
+        position: relative;
+        margin-right: 20px;
+      }
+      .input-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #777;
+      }
+      .text-field {
+        padding-left: 30px; /* Adjust based on icon size */
+        padding-right: 10px;
+        width: 200px;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+      .text-field:focus {
+        border-color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-container">
+      <i class="input-icon fas fa-user"></i>
+      <input type="text" class="text-field" placeholder="Username" />
+    </div>
+
+    <div class="input-container">
+      <i class="input-icon fas fa-lock"></i>
+      <input type="password" class="text-field" placeholder="Password" />
+    </div>
+  </body>
+</html>

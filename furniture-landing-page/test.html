@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vogelpik.com - Pick a number randomly</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #target {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: lightgray;
+        margin: 50px auto;
+      }
+      #cross {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+      }
+      #popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="target">
+      <div id="cross">&#10006;</div>
+      <div id="popup"></div>
+    </div>
+    <div>
+      <label for="min">Min:</label>
+      <input type="number" id="min" value="1" />
+      <label for="max">Max:</label>
+      <input type="number" id="max" value="10" />
+      <button onclick="pickRandom()">pik</button>
+    </div>
+
+    <script>
+      function pickRandom() {
+        var min = parseInt(document.getElementById("min").value);
+        var max = parseInt(document.getElementById("max").value);
+        var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        var target = document.getElementById("target");
+        var cross = document.getElementById("cross");
+        var popup = document.getElementById("popup");
+
+        var angle = Math.random() * 360;
+        var distance = Math.min(target.clientWidth, target.clientHeight) / 3;
+
+        var x = target.clientWidth / 2 + distance * Math.cos(angle);
+        var y = target.clientHeight / 2 + distance * Math.sin(angle);
+
+        cross.style.left = x + "px";
+        cross.style.top = y + "px";
+
+        popup.textContent = "Random Number: " + randomNumber;
+        popup.style.display = "block";
+
+        var audio = new Audio("notification.mp3"); // Path to sound effect
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
