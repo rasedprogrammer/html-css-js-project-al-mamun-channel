@@ -28,7 +28,6 @@ nav {
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #333;
 }
 .lg-menu {
   display: flex;
@@ -322,10 +321,10 @@ p {
   align-items: center;
 }
 .form input {
-  display: inline-flex;
+  display: inline-block;
   border-radius: 3px;
   background: #fff;
-  padding: 24px 44px;
+  padding: 18px 44px;
   margin: 20px auto;
   border: 1px solid #054c73;
   width: 40%;
@@ -336,13 +335,51 @@ p {
   color: #fff;
   margin-left: -10px;
   width: 15%;
-  border: none;
+  /* border: none; */
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.32s ease-in;
 }
+/* Footer Style Section  */
+footer {
+  background: #03344f;
+  color: #fff;
+  padding: 60px 10%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.company-info {
+  width: 35%;
+}
+.company-info a {
+  color: #fff;
+}
+.company-info p {
+  font-size: 16px;
+  color: #fff;
+  margin: 20px 0;
+  line-height: 35px;
+}
+footer h5 {
+  font-size: 20px;
+}
+.photo-gallery {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.photo-gallery img {
+  width: 100%;
+  border-radius: 2px;
+  display: inline-block;
+}
 @media screen and (max-width: 576px) {
+  section {
+    padding: 60px 10%;
+  }
   nav {
     padding: 15px 5%;
   }
@@ -351,5 +388,65 @@ p {
   }
   .menuBtn {
     display: block;
+  }
+  /* Banner Section  */
+  .banner {
+    height: auto;
+  }
+  .banner-container {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+  .empty-div,
+  .banner-container div {
+    width: 100%;
+  }
+  .banner-content {
+    padding: 20px;
+  }
+  .banner-content h1 {
+    font-size: 36px;
+  }
+  /* Stats  */
+  .stats-container {
+    flex-direction: column;
+  }
+  .stats img {
+    width: 60px;
+  }
+  .stats h4 {
+    text-align: left;
+  }
+  /* Collection Section  */
+  .all-collections,
+  .category-container {
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  /* About Section  */
+  .about-container {
+    flex-direction: column-reverse;
+  }
+  .about-content,
+  .about-content p,
+  .form,
+  .form input,
+  .company-info {
+    width: 100%;
+  }
+  .about-container img {
+    width: 100%;
+  }
+  .form input[type="submit"] {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form input {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column-reverse;
   }
 }
